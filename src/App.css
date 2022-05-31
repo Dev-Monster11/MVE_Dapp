@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+  
+}
+.mask{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: black;
+  opacity: 30%;
+  z-index: -1;
+
+}
+body {
+  overflow-x: hidden; /* Hide scrollbars */
+  background-image: url('assets/wallpaper1.png');
+  background-size: cover;
+  font-family: Montserrat Medium;
+}
+
+.side_logo{
+  width: 70%;
+  margin: 20% 15% calc(25% - 2rem) 15%;
+}
+.side_selector{
+  margin-top: 2rem;
+  list-style-type: none;
+  padding-left: 4rem;
+  text-align: left;
+  font-size: 1.5rem;
+  color: white;
+}
+.side_selector span{
+  margin-left: 1rem;
+}
+.side_selector li{
+  margin-top: 1rem;
+}
+.side_select.acive a{
+  color:#d5bf53;
+}
+.side_selector a{
+  color:white;
+  text-decoration: none;
+}
+.account_box{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.calculator_box{
+  display: flex;
+  justify-content: space-between;
+}
+.account_box h6{
+  display: inline;
+}
