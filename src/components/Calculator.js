@@ -8,10 +8,8 @@ import { GetContract } from "../helpers/Contract";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { Button, Card, CardContent } from "@mui/material";
-import TextField from "@mui/material/TextField";
-import { InputBase } from "@mui/material";
-import Slider, { SliderThumb } from "@mui/material/Slider";
+import { Card, CardContent } from "@mui/material";
+import Slider from "@mui/material/Slider";
 import Fade from "@mui/material/Fade";
 
 export default function Calculator(props) {

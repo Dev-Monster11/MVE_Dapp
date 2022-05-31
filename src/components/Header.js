@@ -1,5 +1,4 @@
 import * as React from "react";
-import { connect } from "../store/walletActions";
 import Account from "./account/";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";

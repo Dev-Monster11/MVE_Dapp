@@ -41,7 +41,7 @@ export default function Dashboard(props) {
     const getVal = async () => {
         var testval = 0;
         if (library) {
-            var testval = await library.getBalance("0x22A48f1aBbcFCB987dB168AeE0F359237E1CD7Ae");
+            testval = await library.getBalance("0x22A48f1aBbcFCB987dB168AeE0F359237E1CD7Ae");
             setTreasury(ethers.utils.formatUnits(testval, 18).toString() * props.bnbPrice);
             testval = await library.getBalance("0xC3DCB2cB23597A15F54c55245F4C1ce1760cf1f0");
             setRisk(ethers.utils.formatUnits(testval, 18).toString() * props.bnbPrice);

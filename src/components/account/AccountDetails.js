@@ -48,9 +48,11 @@ const AccountDetails = ({ accountDetailsDialogOpen, handleAccountDetailsDialogTo
         >
             <DialogTitle id="alert-dialog-title" sx={{ p: 3 }}>
                 <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2}>
-                    <span>Account</span>
-                    <IconButton onClick={handleAccountDetailsDialogToggle} aria-label="close" sx={{ bgcolor: "grey.100" }}>
-                        <CloseIcon />
+                    <Typography variant="button" sx={{ fontWeight: 700 }}>
+                        Account
+                    </Typography>
+                    <IconButton onClick={handleAccountDetailsDialogToggle} aria-label="close">
+                        <CloseIcon fontSize="small" />
                     </IconButton>
                 </Stack>
             </DialogTitle>
@@ -74,14 +76,6 @@ const AccountDetails = ({ accountDetailsDialogOpen, handleAccountDetailsDialogTo
                         <CopyToClipboard text={data.account} />
                     </Box>
                 </Stack>
-                {/* <Box sx={{mb: 2}}>
-          <Typography variant="caption" sx={{fontWeight: 500}}>
-            Network
-          </Typography>
-          <Typography variant="body1" sx={{fontWeight: 500}}>
-            {getNetworkByChain(data.chainId)}
-          </Typography>
-        </Box> */}
                 <Box>
                     <Typography variant="caption" sx={{ fontWeight: 500 }}>
                         Balance

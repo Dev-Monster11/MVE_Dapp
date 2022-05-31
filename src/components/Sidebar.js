@@ -1,28 +1,15 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import { Link, BrowserRouter as Router } from "react-router-dom";
-import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import { FaDiscord } from "react-icons/fa";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import { Layers, AccountCircle, Calculate, SwapHorizontalCircle, Article, Telegram, Twitter, Museum } from "@mui/icons-material";
-import Toolbar from "@mui/material/Toolbar";
+import { Layers, AccountCircle, Calculate, SwapHorizontalCircle, Article, Telegram, Twitter } from "@mui/icons-material";
 import logo from "../assets/images/logo512.png";
 
 export default function Sidebar(props) {
     const drawerWidth = 300;
     const [select_sideItem, setSelectItem] = useState(window.location.hash);
-    // useEffect(() => {
-    //     console.log(select_sideItem);
-    // }, select_sideItem);
 
     const drawer = (
         <div>
@@ -68,25 +55,29 @@ export default function Sidebar(props) {
                     </Link>
                 </li>
                 <li className="side_select">
-                    <a href="https://pancakeswap.finance/swap?outputCurrency=0xE97CBB39487a4B06D9D1dd7F17f7fBBda4c2b9c4" target="_blank">
+                    <a
+                        href="https://pancakeswap.finance/swap?outputCurrency=0xE97CBB39487a4B06D9D1dd7F17f7fBBda4c2b9c4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <SwapHorizontalCircle />
                         <span>Swap</span>
                     </a>
                 </li>
                 <li className="side_select">
-                    <a href="https://medusa-finance.gitbook.io/medusa/" target="_blank">
+                    <a href="https://medusa-finance.gitbook.io/medusa/" target="_blank" rel="noopener noreferrer">
                         <Article />
                         <span>Docs</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://t.me/+M5oe2Itrf-VlOTA1" target={"_blank"}>
+                    <a href="https://t.me/+M5oe2Itrf-VlOTA1" target={"_blank"} rel="noopener noreferrer">
                         <Telegram sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                     </a>
-                    <a href="https://twitter.com/finance_medusa" target={"_blank"}>
+                    <a href="https://twitter.com/finance_medusa" target={"_blank"} rel="noopener noreferrer">
                         <Twitter sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                     </a>
-                    <a href="https://discord.gg/ybbW4rFB9u" target={"_blank"}>
+                    <a href="https://discord.gg/ybbW4rFB9u" target={"_blank"} rel="noopener noreferrer">
                         <FaDiscord size={"2rem"} sx={{ color: "white", mr: "1rem" }} />
                     </a>
                 </li>
@@ -151,25 +142,29 @@ export default function Sidebar(props) {
                             </Link>
                         </li>
                         <li className="side_select">
-                            <a href="https://pancakeswap.finance/swap?outputCurrency=0xE97CBB39487a4B06D9D1dd7F17f7fBBda4c2b9c4" target="_blank">
+                            <a
+                                href="https://pancakeswap.finance/swap?outputCurrency=0xE97CBB39487a4B06D9D1dd7F17f7fBBda4c2b9c4"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <SwapHorizontalCircle />
                                 <span>Swap</span>
                             </a>
                         </li>
                         <li className="side_select">
-                            <a href="https://medusa-finance.gitbook.io/medusa/" target="_blank">
+                            <a href="https://medusa-finance.gitbook.io/medusa/" target="_blank" rel="noopener noreferrer">
                                 <Article />
                                 <span>Docs</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://t.me/+M5oe2Itrf-VlOTA1" target={"_blank"}>
+                            <a href="https://t.me/+M5oe2Itrf-VlOTA1" target={"_blank"} rel="noopener noreferrer">
                                 <Telegram sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                             </a>
-                            <a href="https://twitter.com/finance_medusa" target={"_blank"}>
+                            <a href="https://twitter.com/finance_medusa" target={"_blank"} rel="noopener noreferrer">
                                 <Twitter sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                             </a>
-                            <a href="https://discord.gg/ybbW4rFB9u" target={"_blank"}>
+                            <a href="https://discord.gg/ybbW4rFB9u" target={"_blank"} rel="noopener noreferrer">
                                 <FaDiscord size={"2rem"} sx={{ color: "white", mr: "1rem" }} />
                             </a>
                         </li>

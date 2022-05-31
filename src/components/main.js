@@ -5,8 +5,8 @@ import mainabi from "../helpers/contact.json";
 
 import { GetContract } from "../helpers/Contract";
 import { useState, useEffect } from "react";
-// import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { HashRouter as Router, Switch, Route, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+// import { HashRouter as Router, Switch, Route, useLocation } from "react-router-dom";
 import { ethers } from "ethers";
 
 import * as React from "react";
@@ -69,13 +69,13 @@ function Main(props) {
                 <Sidebar closeMenu={handleDrawerToggle} open={mobileOpen} container={container} />
                 <Box component="main" sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
                     <Toolbar />
-                    {/* <Routes> */}
-                    <Switch>
+                    <Routes>
+                        {/* <Switch> */}
                         <Route exact path="/" element={<Dashboard price={price} bnbPrice={bnbprice} pool={pool} time={time} />} />
                         <Route path="/account" element={<Accounts price={price} bnbPrice={bnbprice} time={time} />} />
                         <Route path="/calculator" element={<Calculator price={price} bnbPrice={bnbprice} />} />
-                    </Switch>
-                    {/* </Routes> */}
+                        {/* </Switch> */}
+                    </Routes>
                 </Box>
             </Box>
         </Router>
