@@ -120,7 +120,7 @@ export default function Calculator(props) {
                                             <button
                                                 style={{
                                                     border: "none",
-                                                    marginLeft: "-68px",
+                                                    marginLeft: "-66px",
                                                     backgroundColor: "#791EDB",
                                                     color: "white",
                                                     borderRadius: "3px",
@@ -150,7 +150,7 @@ export default function Calculator(props) {
                                             <button
                                                 style={{
                                                     border: "none",
-                                                    marginLeft: "-68px",
+                                                    marginLeft: "-66px",
                                                     backgroundColor: "#791EDB",
                                                     color: "white",
                                                     borderRadius: "3px",
