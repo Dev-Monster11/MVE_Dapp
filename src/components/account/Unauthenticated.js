@@ -16,7 +16,13 @@ const Unauthenticated = () => {
                 disableElevation
                 fullWidth
                 onClick={handleWalletProvidersDialogToggle}
-                sx={{ boxShadow: "rgb(0 0 0 / 8%) 0px 8px 28px", backgroundColor: "#791EDB", "&:hover": { backgroundColor: "#F84FED" } }}
+                sx={{
+                    borderRadius: 25,
+                    fontSize: "0.8rem",
+                    boxShadow: "rgb(0 0 0 / 8%) 0px 8px 28px",
+                    backgroundColor: "#791EDB",
+                    "&:hover": { backgroundColor: "#F84FED" },
+                }}
             >
                 Connect Wallet
             </Button>
