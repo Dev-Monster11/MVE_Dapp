@@ -157,7 +157,7 @@ export default function Sidebar(props) {
                                 <span>Docs</span>
                             </a>
                         </li>
-                        <li>
+                        <li style={{ marginTop: "40px" }}>
                             <a href="https://t.me/+M5oe2Itrf-VlOTA1" target={"_blank"} rel="noopener noreferrer">
                                 <Telegram sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                             </a>
