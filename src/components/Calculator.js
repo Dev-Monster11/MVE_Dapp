@@ -26,8 +26,8 @@ export default function Calculator(props) {
 
     const [pro, setPro] = useState(0);
     const apy = Math.pow(2, Math.log2(383025.8 / 100 - 1) / 365);
-    const [price, setPrice] = useState(props.price.toFixed(4));
-    const [m_price, setMPrice] = useState(props.price.toFixed(4));
+    const [price, setPrice] = useState(props.price.toFixed(2));
+    const [m_price, setMPrice] = useState(props.price.toFixed(2));
     const [day, setDay] = useState(30);
     useEffect(() => {}, [pro, price, m_price, day]);
     return (
@@ -47,10 +47,10 @@ export default function Calculator(props) {
                                 </Grid>
                                 <Grid item xs={12} sm={4}>
                                     <Typography variant="h6" component="div" gutterBottom>
-                                        MEDUSA Price
+                                        MVE Price
                                     </Typography>
                                     <Typography variant="h5" gutterBottom>
-                                        $ {props.price.toFixed(4)}
+                                        $ {props.price.toFixed(2)}
                                     </Typography>
                                 </Grid>
                                 <Grid item xs={12} sm={4}>
@@ -63,15 +63,15 @@ export default function Calculator(props) {
                                 </Grid>
                                 <Grid item xs={12} sm={4}>
                                     <Typography variant="h6" component="div" gutterBottom>
-                                        Your MEDUSA Balance
+                                        Your MVE Balance
                                     </Typography>
                                     <Typography variant="h5" gutterBottom>
-                                        {balance.toFixed(4)} MEDUSA
+                                        {balance.toFixed(2)} MVE
                                     </Typography>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
                                     <div className="form-group" style={{ textAlign: "left" }}>
-                                        <label htmlFor="formGroupExampleInput">MEDUSA Amount</label>
+                                        <label htmlFor="formGroupExampleInput">MVE Amount</label>
                                         <div style={{ display: "flex" }}>
                                             <input
                                                 type="text"
@@ -85,7 +85,7 @@ export default function Calculator(props) {
                                                 style={{
                                                     border: "none",
                                                     marginLeft: "-42px",
-                                                    backgroundColor: "#b14901",
+                                                    backgroundColor: "#791EDB",
                                                     color: "white",
                                                     borderRadius: "3px",
                                                     fontWeight: "bold",
@@ -107,7 +107,7 @@ export default function Calculator(props) {
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
                                     <div className="form-group" style={{ textAlign: "left" }}>
-                                        <label htmlFor="formGroupExampleInput">MEDUSA price at purchase ($)</label>
+                                        <label htmlFor="formGroupExampleInput">MVE price at purchase ($)</label>
                                         <div style={{ display: "flex" }}>
                                             <input
                                                 type="text"
@@ -120,14 +120,14 @@ export default function Calculator(props) {
                                             <button
                                                 style={{
                                                     border: "none",
-                                                    marginLeft: "-69px",
-                                                    backgroundColor: "#b14901",
+                                                    marginLeft: "-68px",
+                                                    backgroundColor: "#791EDB",
                                                     color: "white",
                                                     borderRadius: "3px",
                                                     fontWeight: "bold",
                                                 }}
                                                 onClick={() => {
-                                                    setPrice(props.price.toFixed(4));
+                                                    setPrice(props.price.toFixed(2));
                                                 }}
                                             >
                                                 Current
@@ -137,7 +137,7 @@ export default function Calculator(props) {
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
                                     <div className="form-group" style={{ textAlign: "left" }}>
-                                        <label htmlFor="formGroupExampleInput">Future MEDUSA market price ($)</label>
+                                        <label htmlFor="formGroupExampleInput">Future MVE market price ($)</label>
                                         <div style={{ display: "flex" }}>
                                             <input
                                                 type="text"
@@ -150,14 +150,14 @@ export default function Calculator(props) {
                                             <button
                                                 style={{
                                                     border: "none",
-                                                    marginLeft: "-69px",
-                                                    backgroundColor: "#b14901",
+                                                    marginLeft: "-68px",
+                                                    backgroundColor: "#791EDB",
                                                     color: "white",
                                                     borderRadius: "3px",
                                                     fontWeight: "bold",
                                                 }}
                                                 onClick={() => {
-                                                    setMPrice(props.price.toFixed(4));
+                                                    setMPrice(props.price.toFixed(2));
                                                 }}
                                             >
                                                 Current
@@ -178,26 +178,26 @@ export default function Calculator(props) {
                                         onChange={(event, value) => {
                                             setDay(value);
                                         }}
-                                        sx={{ height: "10px" }}
+                                        sx={{ height: "10px", color: "#791EDB" }}
                                         aria-label="custom thumb label"
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={12}>
                                     <Box className={"calculator_box"}>
                                         <Typography variant="h6">Your initial investment</Typography>
-                                        <Typography variant="h6">${(pro * price).toFixed(5)}</Typography>
+                                        <Typography variant="h6">${(pro * price).toFixed(2)}</Typography>
                                     </Box>
                                     <Box className={"calculator_box"}>
                                         <Typography variant="h6">Current wealth</Typography>
-                                        <Typography variant="h6">${(pro * price).toFixed(5)}</Typography>
+                                        <Typography variant="h6">${(pro * price).toFixed(2)}</Typography>
                                     </Box>
                                     <Box className={"calculator_box"}>
-                                        <Typography variant="h6">MEDUSA rewards estimation</Typography>
-                                        <Typography variant="h6">{(Math.pow(apy, day) * pro).toFixed(5)} MEDUSA</Typography>
+                                        <Typography variant="h6">MVE rewards estimation</Typography>
+                                        <Typography variant="h6">{(Math.pow(apy, day) * pro).toFixed(2)} MVE</Typography>
                                     </Box>
                                     <Box className={"calculator_box"}>
                                         <Typography variant="h6">Potential return</Typography>
-                                        <Typography variant="h6">${(Math.pow(apy, day) * pro * m_price).toFixed(5)}</Typography>
+                                        <Typography variant="h6">${(Math.pow(apy, day) * pro * m_price).toFixed(2)}</Typography>
                                     </Box>
                                 </Grid>
                             </Grid>

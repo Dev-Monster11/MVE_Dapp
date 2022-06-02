@@ -4,11 +4,11 @@ import { Link, BrowserRouter as Router } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import { FaDiscord } from "react-icons/fa";
-import { Layers, AccountCircle, Calculate, SwapHorizontalCircle, Article, Telegram, Twitter } from "@mui/icons-material";
+import { Dashboard, AccountCircle, Calculate, SwapHorizontalCircle, Article, Telegram, Twitter } from "@mui/icons-material";
 import logo from "../assets/images/logo512.png";
 
 export default function Sidebar(props) {
-    const drawerWidth = 300;
+    const drawerWidth = 250;
     const [select_sideItem, setSelectItem] = useState(window.location.hash);
 
     const drawer = (
@@ -23,7 +23,7 @@ export default function Sidebar(props) {
                 >
                     <Link to="/">
                         <>
-                            <Layers />
+                            <Dashboard />
                             <span>Dashboard</span>
                         </>
                     </Link>
@@ -65,12 +65,12 @@ export default function Sidebar(props) {
                     </a>
                 </li>
                 <li className="side_select">
-                    <a href="https://medusa-finance.gitbook.io/medusa/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://movearn-official.gitbook.io/movearn/" target="_blank" rel="noopener noreferrer">
                         <Article />
                         <span>Docs</span>
                     </a>
                 </li>
-                <li>
+                <li style={{ marginTop: "40px" }}>
                     <a href="https://t.me/+M5oe2Itrf-VlOTA1" target={"_blank"} rel="noopener noreferrer">
                         <Telegram sx={{ color: "white", fontSize: "2rem", mr: "1rem" }} />
                     </a>
@@ -110,7 +110,7 @@ export default function Sidebar(props) {
                         >
                             <Link to="/">
                                 <>
-                                    <Layers />
+                                    <Dashboard />
                                     <span>Dashboard</span>
                                 </>
                             </Link>
@@ -152,7 +152,7 @@ export default function Sidebar(props) {
                             </a>
                         </li>
                         <li className="side_select">
-                            <a href="https://medusa-finance.gitbook.io/medusa/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://movearn-official.gitbook.io/movearn/" target="_blank" rel="noopener noreferrer">
                                 <Article />
                                 <span>Docs</span>
                             </a>

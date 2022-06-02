@@ -53,10 +53,23 @@ export default function Dashboard(props) {
         padding: theme.spacing(1),
         textAlign: "center",
         color: "white",
-        border: "solid thin #e7b913",
+        border: "solid thin #F84FED",
         borderRadius: "10px",
         paddingTop: "1rem",
         paddingBottom: "1rem",
+        fontFamily: "Montserrat Medium",
+    }));
+    const ColorItem = styled(Paper)(({ theme }) => ({
+        backgroundColor: "#791EDB",
+        ...theme.typography.body2,
+        padding: theme.spacing(1),
+        textAlign: "center",
+        color: "white",
+        border: "solid thin white",
+        borderRadius: "10px",
+        paddingTop: "1rem",
+        paddingBottom: "1rem",
+        fontFamily: "Montserrat Medium",
     }));
     return (
         <>
@@ -68,10 +81,10 @@ export default function Dashboard(props) {
                                 <Grid container spacing={3}>
                                     <Grid item xs={12} sm={4}>
                                         <Typography variant="h6" component="div" gutterBottom>
-                                            MEDUSA Price
+                                            MVE Price
                                         </Typography>
                                         <Typography variant="body1" gutterBottom>
-                                            $ {props.price.toFixed(4)}
+                                            $ {props.price.toFixed(2)}
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={12} sm={4}>
@@ -79,7 +92,7 @@ export default function Dashboard(props) {
                                             Market Cap
                                         </Typography>
                                         <Typography variant="body1" gutterBottom>
-                                            $ {(props.price * circulateSupply).toFixed(4)}
+                                            $ {(props.price * circulateSupply).toFixed(2)}
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={12} sm={4}>
@@ -87,7 +100,7 @@ export default function Dashboard(props) {
                                             Circulating Supply
                                         </Typography>
                                         <Typography variant="body1" gutterBottom>
-                                            {(circulateSupply * 1).toFixed(4)}
+                                            {(circulateSupply * 1).toFixed(2)}
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={12} sm={4}>
@@ -111,7 +124,7 @@ export default function Dashboard(props) {
                                             Total Supply
                                         </Typography>
                                         <Typography variant="body1" gutterBottom>
-                                            {(totalSupply * 1).toFixed(4)}
+                                            {(totalSupply * 1).toFixed(2)}
                                         </Typography>
                                     </Grid>
                                 </Grid>
@@ -120,10 +133,10 @@ export default function Dashboard(props) {
                         <Grid item xs={12} sm={6}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    MEDUSA Price
+                                    MVE Price
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    $ {props.price.toFixed(4)}
+                                    $ {props.price.toFixed(2)}
                                 </Typography>
                             </Item>
                         </Grid>
@@ -133,7 +146,7 @@ export default function Dashboard(props) {
                                     Market Value of Treasury Asset
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    $ {treasury.toFixed(4)}
+                                    $ {treasury.toFixed(2)}
                                 </Typography>
                             </Item>
                         </Grid>
@@ -143,47 +156,47 @@ export default function Dashboard(props) {
                                     Pool Value
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    $ {props.pool.toFixed(4)}
+                                    $ {props.pool.toFixed(2)}
                                 </Typography>
                             </Item>
                         </Grid>
                         <Grid item xs={12} sm={6}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    Risk Free Fund Value
+                                    Insurance Fund Value
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    $ {risk.toFixed(4)}
+                                    $ {risk.toFixed(2)}
                                 </Typography>
                             </Item>
                         </Grid>
                         <Grid item xs={12} sm={4}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    # Value of Venom Pit
+                                    # Value of Burn Pit
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    {pit.toFixed(4)} MEDUSA
+                                    {pit.toFixed(2)} MVE
                                 </Typography>
                             </Item>
                         </Grid>
                         <Grid item xs={12} sm={4}>
-                            <Item>
+                            <ColorItem>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    $ Value of Venom Pit
+                                    $ Value of Burn Pit
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    $ {(pit * props.price).toFixed(4)}
+                                    $ {(pit * props.price).toFixed(2)}
                                 </Typography>
-                            </Item>
+                            </ColorItem>
                         </Grid>
                         <Grid item xs={12} sm={4}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
-                                    % Venom Pit : Supply
+                                    % Burn Pit : Supply
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    {((pit / totalSupply) * 100).toFixed(4)}%
+                                    {((pit / totalSupply) * 100).toFixed(2)}%
                                 </Typography>
                             </Item>
                         </Grid>

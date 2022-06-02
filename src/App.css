@@ -2,20 +2,12 @@
   text-align: center;
   
 }
-.mask{
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  background-color: black;
-  opacity: 30%;
-  z-index: -1;
-
-}
 body {
-  overflow-x: hidden; /* Hide scrollbars */
-  background-image: url('assets/wallpaper1.png');
-  background-size: cover;
-  font-family: Montserrat Medium;
+  font-family: Montserrat Medium !important;
+  background-color: #1B0230 !important;
+}
+.MuiTypography-root{
+  font-family: Montserrat Medium !important;
 }
 
 .side_logo{
@@ -37,7 +29,7 @@ body {
   margin-top: 1rem;
 }
 .side_select.acive a{
-  color:#d5bf53;
+  color:#F84FED;
 }
 .side_selector a{
   color:white;

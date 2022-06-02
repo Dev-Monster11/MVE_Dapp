@@ -1,5 +1,5 @@
 import * as React from "react";
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Countdown from "react-countdown";
 
 export default function Timer(props) {
@@ -7,7 +7,7 @@ export default function Timer(props) {
     // const [timeString, setTimeString] = useState("00:00:00");
     const renderer = ({ hours, minutes, seconds, completed }) => {
         if (completed) {
-            // if (props.time > 0) window.location.reload();
+            if (props.time > 0) window.location.reload();
             // Render a completed state
             return <span>00:00:00</span>;
         } else {
@@ -19,11 +19,10 @@ export default function Timer(props) {
             );
         }
     };
-    console.log(props.time);
-    console.log(300000 - ((Date.now() - props.time * 1000) % 300000));
+    if (props.time === 0) return <span>00:00:00</span>;
     return (
         <>
-            <Countdown date={300000 - ((Date.now() - props.time * 1000) % 300000)} renderer={renderer} />
+            <Countdown date={Date.now() + 900000 - ((Date.now() - props.time * 1000) % 900000)} renderer={renderer} />
         </>
     );
 }

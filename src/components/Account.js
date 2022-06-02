@@ -31,11 +31,24 @@ export default function Accounts(props) {
         padding: theme.spacing(1),
         textAlign: "center",
         color: "white",
-        border: "solid thin #e7b913",
+        border: "solid thin #F84FED",
         borderRadius: "10px",
         paddingTop: "1rem",
         paddingBottom: "1rem",
     }));
+    const ColorItem = styled(Paper)(({ theme }) => ({
+        backgroundColor: "#791EDB",
+        ...theme.typography.body2,
+        padding: theme.spacing(1),
+        textAlign: "center",
+        color: "white",
+        border: "solid thin white",
+        borderRadius: "10px",
+        paddingTop: "1rem",
+        paddingBottom: "1rem",
+        fontFamily: "Montserrat Medium",
+    }));
+
     return (
         <>
             <Fade in={true} style={{ transitionDelay: "100ms" }}>
@@ -47,15 +60,15 @@ export default function Accounts(props) {
                                     Your Balance
                                 </Typography>
                                 <Typography variant="h4" gutterBottom>
-                                    $ {(balance * props.price).toFixed(4)}
+                                    $ {(balance * props.price).toFixed(2)}
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    {balance.toFixed(4)} MEDUSA
+                                    {balance.toFixed(2)} MVE
                                 </Typography>
                             </Item>
                         </Grid>
                         <Grid item xs={12} sm={4}>
-                            <Item>
+                            <ColorItem>
                                 <Typography variant="h6" component="div" gutterBottom>
                                     APY
                                 </Typography>
@@ -65,7 +78,7 @@ export default function Accounts(props) {
                                 <Typography variant="body1" gutterBottom>
                                     Daily ROI 2.28%
                                 </Typography>
-                            </Item>
+                            </ColorItem>
                         </Grid>
                         <Grid item xs={12} sm={4}>
                             <Item>
@@ -83,32 +96,32 @@ export default function Accounts(props) {
                         <Grid item xs={12} sm={12}>
                             <Item>
                                 <Box className={"account_box"}>
-                                    <Typography variant="h6">Current MEDUSA Price</Typography>
-                                    <Typography variant="h6">$ {props.price.toFixed(4)}</Typography>
+                                    <Typography variant="h6">Current MVE Price</Typography>
+                                    <Typography variant="h6">$ {props.price.toFixed(2)}</Typography>
                                 </Box>
                                 <Box className={"account_box"}>
                                     <Typography variant="h6">Next Reward Amount</Typography>
-                                    <Typography variant="h6">{((balance * 0.02355) / 100).toFixed(4)} MEDUSA</Typography>
+                                    <Typography variant="h6">{((balance * 0.02355) / 100).toFixed(2)} MVE</Typography>
                                 </Box>
                                 <Box className={"account_box"}>
                                     <Typography variant="h6">Next Reward Amount USD</Typography>
-                                    <Typography variant="h6">$ {(((balance * 0.02355) / 100) * props.price).toFixed(4)}</Typography>
+                                    <Typography variant="h6">$ {(((balance * 0.02355) / 100) * props.price).toFixed(2)}</Typography>
                                 </Box>
                                 <Box className={"account_box"}>
                                     <Typography variant="h6">Next Reward Yield</Typography>
                                     <Typography variant="h6">0.02355%</Typography>
                                 </Box>
                                 <Box className={"account_box"}>
-                                    <Typography variant="h6">ROI(1-Day Rate) USD</Typography>
-                                    <Typography variant="h6">$ {(((balance * 0.02355) / 100) * 96 * props.price).toFixed(4)}</Typography>
+                                    <Typography variant="h6">ROI per day</Typography>
+                                    <Typography variant="h6">$ {(((balance * 0.02355) / 100) * 96 * props.price).toFixed(2)}</Typography>
                                 </Box>
                                 <Box className={"account_box"}>
-                                    <Typography variant="h6">ROI(5-Day Rate)</Typography>
+                                    <Typography variant="h6">ROI per month</Typography>
                                     <Typography variant="h6">11.96%</Typography>
                                 </Box>
                                 <Box className={"account_box"}>
-                                    <Typography variant="h6">ROI(5-Day Rate) USD</Typography>
-                                    <Typography variant="h6">$ {(((balance * 0.02355) / 100) * 480 * props.price).toFixed(4)}</Typography>
+                                    <Typography variant="h6">ROI per year</Typography>
+                                    <Typography variant="h6">$ {(((balance * 0.02355) / 100) * 480 * props.price).toFixed(2)}</Typography>
                                 </Box>
                             </Item>
                         </Grid>
