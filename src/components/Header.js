@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 export default function Header(props) {
-    const drawerWidth = 300;
+    const drawerWidth = 250;
     return (
         <AppBar
             position="fixed"

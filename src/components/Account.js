@@ -54,6 +54,38 @@ export default function Accounts(props) {
             <Fade in={true} style={{ transitionDelay: "100ms" }}>
                 <Box sx={{ flexGrow: 1, maxWidth: "1000px", mx: "auto" }}>
                     <Grid container spacing={3}>
+                        <Grid item xs={12} sm={12}>
+                            <Item>
+                                <Box className={"account_box"}>
+                                    <Typography variant="h6">Current MVE Price</Typography>
+                                    <Typography variant="h6">$ {props.price.toFixed(2)}</Typography>
+                                </Box>
+                                <Box className={"account_box"}>
+                                    <Typography variant="h6">Next Reward Amount</Typography>
+                                    <Typography variant="h6">{((balance * 0.02355) / 100).toFixed(2)} MVE</Typography>
+                                </Box>
+                                <Box className={"account_box"}>
+                                    <Typography variant="h6">Next Reward Amount USD</Typography>
+                                    <Typography variant="h6">$ {(((balance * 0.02355) / 100) * props.price).toFixed(2)}</Typography>
+                                </Box>
+                                <Box className={"account_box"}>
+                                    <Typography variant="h6">Next Reward Yield</Typography>
+                                    <Typography variant="h6">0.0083%</Typography>
+                                </Box>
+                                <Box className={"account_box"}>
+                                    <Typography variant="h6">ROI per day</Typography>
+                                    <Typography variant="h6">2.4191%</Typography>
+                                </Box>
+                                <Box className={"account_box"}>
+                                    <Typography variant="h6">ROI per month</Typography>
+                                    <Typography variant="h6">104.8464%</Typography>
+                                </Box>
+                                <Box className={"account_box"}>
+                                    <Typography variant="h6">ROI per year</Typography>
+                                    <Typography variant="h6">615,140.2496%</Typography>
+                                </Box>
+                            </Item>
+                        </Grid>
                         <Grid item xs={12} sm={4}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
@@ -73,10 +105,10 @@ export default function Accounts(props) {
                                     APY
                                 </Typography>
                                 <Typography variant="h4" gutterBottom>
-                                    383,025.8%
+                                    615,240.2496%
                                 </Typography>
                                 <Typography variant="body1" gutterBottom>
-                                    Daily ROI 2.28%
+                                    Daily ROI 2.4191%
                                 </Typography>
                             </ColorItem>
                         </Grid>
@@ -91,38 +123,6 @@ export default function Accounts(props) {
                                 <Typography variant="body1" gutterBottom>
                                     You will earn money soon
                                 </Typography>
-                            </Item>
-                        </Grid>
-                        <Grid item xs={12} sm={12}>
-                            <Item>
-                                <Box className={"account_box"}>
-                                    <Typography variant="h6">Current MVE Price</Typography>
-                                    <Typography variant="h6">$ {props.price.toFixed(2)}</Typography>
-                                </Box>
-                                <Box className={"account_box"}>
-                                    <Typography variant="h6">Next Reward Amount</Typography>
-                                    <Typography variant="h6">{((balance * 0.02355) / 100).toFixed(2)} MVE</Typography>
-                                </Box>
-                                <Box className={"account_box"}>
-                                    <Typography variant="h6">Next Reward Amount USD</Typography>
-                                    <Typography variant="h6">$ {(((balance * 0.02355) / 100) * props.price).toFixed(2)}</Typography>
-                                </Box>
-                                <Box className={"account_box"}>
-                                    <Typography variant="h6">Next Reward Yield</Typography>
-                                    <Typography variant="h6">0.02355%</Typography>
-                                </Box>
-                                <Box className={"account_box"}>
-                                    <Typography variant="h6">ROI per day</Typography>
-                                    <Typography variant="h6">$ {(((balance * 0.02355) / 100) * 96 * props.price).toFixed(2)}</Typography>
-                                </Box>
-                                <Box className={"account_box"}>
-                                    <Typography variant="h6">ROI per month</Typography>
-                                    <Typography variant="h6">11.96%</Typography>
-                                </Box>
-                                <Box className={"account_box"}>
-                                    <Typography variant="h6">ROI per year</Typography>
-                                    <Typography variant="h6">$ {(((balance * 0.02355) / 100) * 480 * props.price).toFixed(2)}</Typography>
-                                </Box>
                             </Item>
                         </Grid>
                     </Grid>

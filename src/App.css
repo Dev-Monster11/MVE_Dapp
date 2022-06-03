@@ -17,7 +17,7 @@ body {
 .side_selector{
   margin-top: 2rem;
   list-style-type: none;
-  padding-left: 4rem;
+  padding-left: 0px;
   text-align: left;
   font-size: 1.5rem;
   color: white;
@@ -26,15 +26,31 @@ body {
   margin-left: 1rem;
 }
 .side_selector li{
-  margin-top: 1rem;
+  padding-left:3rem;
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .side_select.acive a{
   color:#F84FED;
+}
+.side_select.acive{
+  background-color:#791edb36;
+}
+.side_select.acive::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 10px;
+  height: 60%;
+  width: 4px;
+  background: rgb(207, 22, 93);
 }
 .side_selector a{
   color:white;
   text-decoration: none;
 }
+
 .account_box{
   display: flex;
   justify-content: space-between;
@@ -46,4 +62,13 @@ body {
 }
 .account_box h6{
   display: inline;
+}
+.main-part{
+  display: flex;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: calc(100vh - 70px);
+    background-image: linear-gradient(to bottom left, #000000de, #34045c);
+    overflow: hidden auto;
 }

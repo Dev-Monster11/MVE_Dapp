@@ -15,39 +15,39 @@ export default function Sidebar(props) {
         <div>
             <img className="side_logo" src={logo} />
             <ul className="side_selector">
-                <li
-                    onClick={() => {
-                        setSelectItem("#/");
-                    }}
-                    className={select_sideItem === "#/" ? "side_select acive" : "side_select"}
-                >
-                    <Link to="/">
+                <li className={select_sideItem === "#/" ? "side_select acive" : "side_select"}>
+                    <Link
+                        to="/"
+                        onClick={() => {
+                            setSelectItem("#/");
+                        }}
+                    >
                         <>
                             <Dashboard />
                             <span>Dashboard</span>
                         </>
                     </Link>
                 </li>
-                <li
-                    onClick={() => {
-                        setSelectItem("#/account");
-                    }}
-                    className={select_sideItem === "#/account" ? "side_select acive" : "side_select"}
-                >
-                    <Link to="/account">
+                <li className={select_sideItem === "#/account" ? "side_select acive" : "side_select"}>
+                    <Link
+                        to="/account"
+                        onClick={() => {
+                            setSelectItem("#/account");
+                        }}
+                    >
                         <>
                             <AccountCircle />
                             <span>Account</span>
                         </>
                     </Link>
                 </li>
-                <li
-                    onClick={() => {
-                        setSelectItem("#/calculator");
-                    }}
-                    className={select_sideItem === "#/calculator" ? "side_select acive" : "side_select"}
-                >
-                    <Link to="/calculator">
+                <li className={select_sideItem === "#/calculator" ? "side_select acive" : "side_select"}>
+                    <Link
+                        to="/calculator"
+                        onClick={() => {
+                            setSelectItem("#/calculator");
+                        }}
+                    >
                         <>
                             <Calculate />
                             <span>Calculator</span>
@@ -102,39 +102,39 @@ export default function Sidebar(props) {
             >
                 <div>
                     <ul className="side_selector">
-                        <li
-                            onClick={() => {
-                                setSelectItem("#/");
-                            }}
-                            className={select_sideItem === "#/" ? "side_select acive" : "side_select"}
-                        >
-                            <Link to="/">
+                        <li className={select_sideItem === "#/" ? "side_select acive" : "side_select"}>
+                            <Link
+                                to="/"
+                                onClick={() => {
+                                    setSelectItem("#/");
+                                }}
+                            >
                                 <>
                                     <Dashboard />
                                     <span>Dashboard</span>
                                 </>
                             </Link>
                         </li>
-                        <li
-                            onClick={() => {
-                                setSelectItem("#/account");
-                            }}
-                            className={select_sideItem === "#/account" ? "side_select acive" : "side_select"}
-                        >
-                            <Link to="/account">
+                        <li className={select_sideItem === "#/account" ? "side_select acive" : "side_select"}>
+                            <Link
+                                to="/account"
+                                onClick={() => {
+                                    setSelectItem("#/account");
+                                }}
+                            >
                                 <>
                                     <AccountCircle />
                                     <span>Account</span>
                                 </>
                             </Link>
                         </li>
-                        <li
-                            onClick={() => {
-                                setSelectItem("#/calculator");
-                            }}
-                            className={select_sideItem === "#/calculator" ? "side_select acive" : "side_select"}
-                        >
-                            <Link to="/calculator">
+                        <li className={select_sideItem === "#/calculator" ? "side_select acive" : "side_select"}>
+                            <Link
+                                to="/calculator"
+                                onClick={() => {
+                                    setSelectItem("#/calculator");
+                                }}
+                            >
                                 <>
                                     <Calculate />
                                     <span>Calculator</span>

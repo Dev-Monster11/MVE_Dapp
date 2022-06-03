@@ -58,6 +58,10 @@ export default function Dashboard(props) {
         paddingTop: "1rem",
         paddingBottom: "1rem",
         fontFamily: "Montserrat Medium",
+        height: "100%",
+        display: "flex",
+        flexFlow: "column",
+        justifyContent: "center",
     }));
     const ColorItem = styled(Paper)(({ theme }) => ({
         backgroundColor: "#791EDB",
@@ -130,7 +134,7 @@ export default function Dashboard(props) {
                                 </Grid>
                             </Item>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid item xs={12} sm={3}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
                                     MVE Price
@@ -140,7 +144,7 @@ export default function Dashboard(props) {
                                 </Typography>
                             </Item>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid item xs={12} sm={3}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
                                     Market Value of Treasury Asset
@@ -150,7 +154,7 @@ export default function Dashboard(props) {
                                 </Typography>
                             </Item>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid item xs={12} sm={3}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
                                     Pool Value
@@ -160,7 +164,7 @@ export default function Dashboard(props) {
                                 </Typography>
                             </Item>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
+                        <Grid item xs={12} sm={3}>
                             <Item>
                                 <Typography variant="h6" component="div" gutterBottom>
                                     Insurance Fund Value
