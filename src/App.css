@@ -54,7 +54,7 @@ body {
 .account_box{
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  margin: 12px;
 }
 .calculator_box{
   display: flex;

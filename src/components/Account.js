@@ -88,41 +88,31 @@ export default function Accounts(props) {
                         </Grid>
                         <Grid item xs={12} sm={4}>
                             <Item>
-                                <Typography variant="h6" component="div" gutterBottom>
+                                <Typography variant="h6" component="div">
                                     Your Balance
                                 </Typography>
-                                <Typography variant="h4" gutterBottom>
-                                    $ {(balance * props.price).toFixed(2)}
-                                </Typography>
-                                <Typography variant="body1" gutterBottom>
-                                    {balance.toFixed(2)} MVE
-                                </Typography>
+                                <Typography variant="h4">$ {(balance * props.price).toFixed(2)}</Typography>
+                                <Typography variant="body1">{balance.toFixed(2)} MVE</Typography>
                             </Item>
                         </Grid>
                         <Grid item xs={12} sm={4}>
                             <ColorItem>
-                                <Typography variant="h6" component="div" gutterBottom>
+                                <Typography variant="h6" component="div">
                                     APY
                                 </Typography>
-                                <Typography variant="h4" gutterBottom>
-                                    615,240.2496%
-                                </Typography>
-                                <Typography variant="body1" gutterBottom>
-                                    Daily ROI 2.4191%
-                                </Typography>
+                                <Typography variant="h4">615,240.2496%</Typography>
+                                <Typography variant="body1">Daily ROI 2.4191%</Typography>
                             </ColorItem>
                         </Grid>
                         <Grid item xs={12} sm={4}>
                             <Item>
-                                <Typography variant="h6" component="div" gutterBottom>
+                                <Typography variant="h6" component="div">
                                     Next Rebase:
                                 </Typography>
-                                <Typography variant="h4" gutterBottom>
+                                <Typography variant="h4">
                                     <Timer time={props.time} />
                                 </Typography>
-                                <Typography variant="body1" gutterBottom>
-                                    You will earn money soon
-                                </Typography>
+                                <Typography variant="body1">You will earn money soon</Typography>
                             </Item>
                         </Grid>
                     </Grid>
