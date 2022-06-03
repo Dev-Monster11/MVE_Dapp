@@ -71,7 +71,7 @@ function Main(props) {
                     className="main-part"
                     sx={{ width: { sm: `calc(100% - ${drawerWidth}px)` }, ml: { sm: `${drawerWidth}px` }, borderBottomLeftRadius: { sm: `100px` } }}
                 >
-                    <Box sx={{ flexGrow: 1, p: 0, mt: 7 }}>
+                    <Box sx={{ flexGrow: 1, p: 5, mt: 7 }}>
                         <Routes>
                             {/* <Switch> */}
                             <Route exact path="/" element={<Dashboard price={price} bnbPrice={bnbprice} pool={pool} time={time} />} />
