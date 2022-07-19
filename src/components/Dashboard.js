@@ -78,7 +78,7 @@ export default function Dashboard(props) {
     return (
         <>
             <Fade in={true} style={{ transitionDelay: "100ms" }}>
-                <Box sx={{ flexGrow: 1, maxWidth: "1000px", mx: "auto" }}>
+                <Box sx={{ flexGrow: 1, maxWidth: "1000px", mx: "auto",pb:10 }}>
                     <Grid container spacing={3}>
                         <Grid item xs={12} sm={12}>
                             <Item>

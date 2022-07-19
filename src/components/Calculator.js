@@ -60,7 +60,7 @@ export default function Calculator(props) {
     return (
         <>
             <Fade in={true} style={{ transitionDelay: "100ms" }}>
-                <Grid container spacing={3} sx={{ color: "white" }}>
+                <Grid container spacing={3} sx={{ color: "white",pb:10 }}>
                     <Grid item xs={12} sm={12}>
                         <Typography variant="h5" component="div" align="left">
                             Calculator
