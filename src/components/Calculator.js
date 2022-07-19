@@ -74,7 +74,7 @@ export default function Calculator(props) {
                             <Grid item xs={12} sm={4}>
                                 <ColorItem>
                                     <Typography variant="h6" component="div" gutterBottom>
-                                        MVE Price
+                                        RunEarn Price
                                     </Typography>
                                     <Typography variant="h5" gutterBottom>
                                         $ {props.price.toFixed(2)}
@@ -94,16 +94,16 @@ export default function Calculator(props) {
                             <Grid item xs={12} sm={4}>
                                 <Item>
                                     <Typography variant="h6" component="div" gutterBottom>
-                                        Your MVE Balance
+                                        Your RunEarn Balance
                                     </Typography>
                                     <Typography variant="h5" gutterBottom>
-                                        {balance.toFixed(2)} MVE
+                                        {balance.toFixed(2)} RunEarn
                                     </Typography>
                                 </Item>
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <div className="form-group" style={{ textAlign: "left" }}>
-                                    <label htmlFor="formGroupExampleInput">MVE Amount</label>
+                                    <label htmlFor="formGroupExampleInput">RunEarn Amount</label>
                                     <div style={{ display: "flex" }}>
                                         <input
                                             type="text"
@@ -146,7 +146,7 @@ export default function Calculator(props) {
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <div className="form-group" style={{ textAlign: "left" }}>
-                                    <label htmlFor="formGroupExampleInput">MVE price at purchase ($)</label>
+                                    <label htmlFor="formGroupExampleInput">RunEarn price at purchase ($)</label>
                                     <div style={{ display: "flex" }}>
                                         <input
                                             type="text"
@@ -177,7 +177,7 @@ export default function Calculator(props) {
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <div className="form-group" style={{ textAlign: "left" }}>
-                                    <label htmlFor="formGroupExampleInput">Future MVE market price ($)</label>
+                                    <label htmlFor="formGroupExampleInput">Future RunEarn market price ($)</label>
                                     <div style={{ display: "flex" }}>
                                         <input
                                             type="text"
@@ -237,8 +237,8 @@ export default function Calculator(props) {
                                     <Typography variant="h6">${(pro * price).toFixed(2)}</Typography>
                                 </Box>
                                 <Box className={"calculator_box"}>
-                                    <Typography variant="h6">MVE rewards estimation</Typography>
-                                    <Typography variant="h6">{(Math.pow(apy, day) * pro).toFixed(2)} MVE</Typography>
+                                    <Typography variant="h6">RunEarn rewards estimation</Typography>
+                                    <Typography variant="h6">{(Math.pow(apy, day) * pro).toFixed(2)} RunEarn</Typography>
                                 </Box>
                                 <Box className={"calculator_box"}>
                                     <Typography variant="h6">Potential return</Typography>

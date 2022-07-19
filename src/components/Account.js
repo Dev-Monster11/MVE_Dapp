@@ -57,12 +57,12 @@ export default function Accounts(props) {
                         <Grid item xs={12} sm={12}>
                             <Item>
                                 <Box className={"account_box"}>
-                                    <Typography variant="h6">Current MVE Price</Typography>
+                                    <Typography variant="h6">Current RunEarn Price</Typography>
                                     <Typography variant="h6">$ {props.price.toFixed(2)}</Typography>
                                 </Box>
                                 <Box className={"account_box"}>
                                     <Typography variant="h6">Next Reward Amount</Typography>
-                                    <Typography variant="h6">{((balance * 0.02355) / 100).toFixed(2)} MVE</Typography>
+                                    <Typography variant="h6">{((balance * 0.02355) / 100).toFixed(2)} RunEarn</Typography>
                                 </Box>
                                 <Box className={"account_box"}>
                                     <Typography variant="h6">Next Reward Amount USD</Typography>
@@ -92,7 +92,7 @@ export default function Accounts(props) {
                                     Your Balance
                                 </Typography>
                                 <Typography variant="h4">$ {(balance * props.price).toFixed(2)}</Typography>
-                                <Typography variant="body1">{balance.toFixed(2)} MVE</Typography>
+                                <Typography variant="body1">{balance.toFixed(2)} RunEarn</Typography>
                             </Item>
                         </Grid>
                         <Grid item xs={12} sm={4}>
